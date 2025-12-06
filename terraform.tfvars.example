@@ -1,0 +1,30 @@
+# AWS Provider Configuration
+aws_region     = "us-east-1"
+aws_access_key = "test"
+aws_secret_key = "test"
+
+# Environment Configuration
+environment     = "localstack"
+availability_zone = "us-east-1a"
+
+# VPC Configuration
+vpc_cidr           = "10.0.0.0/16"
+public_subnet_cidr = "10.0.1.0/24"
+
+# EC2 Configuration
+instance_type = "t2.micro"
+
+# S3 Configuration
+bucket_name       = "localstack-demo-bucket"
+enable_versioning = false
+
+# DynamoDB Configuration
+dynamodb_table_name   = "Users"
+dynamodb_hash_key     = "UserId"
+dynamodb_billing_mode = "PAY_PER_REQUEST"
+dynamodb_attributes = [
+  {
+    name = "UserId"
+    type = "S"
+  }
+]
